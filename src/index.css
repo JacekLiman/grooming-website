@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply bg-body font-primary text-blue;
+    @apply bg-slate-50 font-primary text-blue;
   }
 }

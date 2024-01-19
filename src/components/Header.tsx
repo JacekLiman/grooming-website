@@ -5,17 +5,22 @@ import { HiMenuAlt3 } from "react-icons/hi";
 
 import { navigation } from "../data";
 import NavMobile from "./NavMobile";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [navMobile, setNavMobile] = useState(false);
+  const [scrollActive, setScrollActive] = useState(false);
 
-  console.log(navMobile);
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      window.scrollY > 0 ? setScrollActive(true) : setScrollActive(false);
+    });
+  });
 
   return (
-    <header className="bg-white fixed w-screen shadow-primary">
+    <header className={`${scrollActive ? "bg-white":"bg-transparent"}  fixed w-screen shadow-primary z-10 transition-all`}>
       <div className="container mx-auto">
-        <div className="py-3 flex justify-between items-center">
+        <div className="p-3 flex justify-between items-center">
           <div>
             <img src={Logo} alt="" />
           </div>
@@ -24,7 +29,10 @@ const Header = () => {
               {navigation.map((item, idx) => {
                 return (
                   <li className="text-sm " key={idx}>
-                    <a className="p-2 hover:text-orange transition-all" href={item.href}>
+                    <a
+                      className="p-2 hover:text-orange transition-all"
+                      href={item.href}
+                    >
                       {item.name}
                     </a>
                   </li>
