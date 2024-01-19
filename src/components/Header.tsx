@@ -4,8 +4,14 @@ import Phone from "../assets/img/phone.svg";
 import { HiMenuAlt3 } from "react-icons/hi";
 
 import { navigation } from "../data";
+import NavMobile from "./NavMobile";
+import { useState } from "react";
 
 const Header = () => {
+  const [navMobile, setNavMobile] = useState(false);
+
+  console.log(navMobile);
+
   return (
     <header className="bg-white fixed w-screen shadow-primary">
       <div className="container mx-auto">
@@ -17,8 +23,10 @@ const Header = () => {
             <ul className="flex items-start gap-6 capitalize ">
               {navigation.map((item, idx) => {
                 return (
-                  <li className="text-sm" key={idx}>
-                    <a  className="p-2" href={item.href}>{item.name}</a>
+                  <li className="text-sm " key={idx}>
+                    <a className="p-2 hover:text-orange transition-all" href={item.href}>
+                      {item.name}
+                    </a>
                   </li>
                 );
               })}
@@ -29,13 +37,17 @@ const Header = () => {
               <img src={Phone} alt="" />
               <p className="text-lg font-bold">+ 1 000 10 84 000</p>
             </div>
-            <div className="text-sm hidden md:block">Opening Hours: Mon - Sun: 10am - 6pm</div>
+            <div className="text-sm hidden md:block">
+              Opening Hours: Mon - Sun: 10am - 6pm
+            </div>
           </div>
-          <button className="lg:hidden">
+          <button onClick={() => setNavMobile(true)} className="lg:hidden">
             <HiMenuAlt3 size={30} />
           </button>
         </div>
       </div>
+
+      <NavMobile navMobile={navMobile} setNavMobile={setNavMobile} />
     </header>
   );
 };
