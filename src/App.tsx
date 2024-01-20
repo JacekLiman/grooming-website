@@ -1,5 +1,6 @@
 import Appointment from "./components/Appointment";
 import Category from "./components/Category";
+import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 
@@ -11,6 +12,7 @@ function App() {
     <Hero/>
     <Appointment/>
     <Category/>
+    <Contact/>
   </div>;
 }
 

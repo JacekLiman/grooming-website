@@ -15,10 +15,10 @@ const CategoryItem = ({ image, name, dogCategory,setCategory,category }: Categor
       onClick={() => setCategory(name)}
       className={` ${
         name === category ? "border-slate-200" : "border-transparent "
-      } p-4 flex flex-col items-center gap-2 cursor-pointer border hover:border-slate-200 rounded-xl`}
+      } group p-4 flex flex-col items-center gap-2 cursor-pointer border hover:border-slate-200 rounded-xl`}
     >
       <div className="mb-4">
-        <img className="w-full max-w-[250px] mx-auto" src={image} alt="" />
+        <img className="group-hover:scale-105 w-full max-w-[250px] mx-auto" src={image} alt="" />
       </div>
       <h3 className="capitalize text-center text-lg font-semibold">{name}</h3>
       <p className="relative text-center text-sm px-10 py-2 border-b-orange border-b-2">
