@@ -21,7 +21,7 @@ const CategoryItem = ({ image, name, dogCategory,setCategory,category }: Categor
         <img className="group-hover:scale-105 w-full max-w-[250px] mx-auto" src={image} alt="" />
       </div>
       <h3 className="capitalize text-center text-lg font-semibold">{name}</h3>
-      <p className="relative text-center text-sm px-10 py-2 border-b-orange border-b-2">
+      <p className="relative text-center text-sm px-4 py-2 border-b-orange border-b-2">
         <img
           className={`${
             name === category ? "block" : "hidden"
