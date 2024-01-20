@@ -66,7 +66,7 @@ export const bundleData = [
       {
         name: 'smart',
         price: 20,
-        list: ['wash', 'ears cleaning', 'nail cut', 'perfumed'],
+        list: ['wash', 'ears cleaning', 'nail cut'],
       },
       {
         name: 'premium',
@@ -76,7 +76,7 @@ export const bundleData = [
           'service 1',
           'service 2',
           'service 3',
-          'service 4',
+          
         ],
       },
       {
@@ -88,8 +88,7 @@ export const bundleData = [
           'service 2',
           'service 3',
           'service 4',
-          'service 5',
-          'service 6',
+         
         ],
       },
     ],
@@ -103,7 +102,7 @@ export const bundleData = [
       {
         name: 'smart',
         price: 80,
-        list: ['wash', 'ears cleaning', 'nail cut', 'perfumed'],
+        list: ['wash', 'ears cleaning', 'nail cut'],
       },
       {
         name: 'premium',
@@ -113,7 +112,7 @@ export const bundleData = [
           'service 1',
           'service 2',
           'service 3',
-          'service 4',
+          
         ],
       },
       {
@@ -126,7 +125,7 @@ export const bundleData = [
           'service 3',
           'service 4',
           'service 5',
-          'service 6',
+          
         ],
       },
     ],
@@ -150,7 +149,7 @@ export const bundleData = [
           'service 1',
           'service 2',
           'service 3',
-          'service 4',
+          
         ],
       },
       {
@@ -163,7 +162,7 @@ export const bundleData = [
           'service 3',
           'service 4',
           'service 5',
-          'service 6',
+          
         ],
       },
     ],

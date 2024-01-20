@@ -18,9 +18,13 @@ const Header = () => {
   });
 
   return (
-    <header className={`${scrollActive ? "bg-white":"bg-transparent"}  fixed w-screen shadow-primary z-10 transition-all`}>
+    <header
+      className={`${
+        scrollActive ? "bg-white shadow-primary" : "bg-transparent "
+      }  fixed w-screen  z-10 transition-all`}
+    >
       <div className="container mx-auto">
-        <div className="p-3 flex justify-between items-center">
+        <div className="flex justify-between items-center py-5">
           <div>
             <img src={Logo} alt="" />
           </div>
